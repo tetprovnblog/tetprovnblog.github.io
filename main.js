@@ -314,7 +314,7 @@ document.addEventListener('DOMContentLoaded', function () {
  * ============================================================================
  */
 (function () {
-  let allowedDomains = ['vozwiki.com', 'vozwikivn.blogspot.com'];
+  let allowedDomains = ['tet.pro.vn', 'tetprovn.blogspot.com'];
   let isAuthorized = allowedDomains.some(
     (domain) =>
       location.hostname === domain || location.hostname.endsWith('.' + domain)
@@ -343,7 +343,7 @@ document.addEventListener('DOMContentLoaded', function () {
     setTimeout(() => {
       console.clear();
       console.warn(
-        '%c⛔ Script thuộc bản quyền VOZWIKI. Không được sao chép hoặc sử dụng trái phép!',
+        '%c⛔ Script thuộc bản quyền TETPRO. Không được sao chép hoặc sử dụng trái phép!',
         'color: red; font-size: 20px; font-weight: bold;'
       );
     }, 100);
@@ -366,11 +366,11 @@ document.addEventListener('DOMContentLoaded', function () {
     `;
     overlay.innerHTML = `
       <h1 style="font-size:32px;color:red;">⛔ VI PHẠM BẢN QUYỀN ⛔</h1>
-      <img src="https://blogger.googleusercontent.com/img/a/AVvXsEgl6t5URLFacHtVboK6UY6QH5Hueu-D0_9qsw6LRHEih3qQdpegNDpVLcGa06K9m_Wd9Lw8mbFOwipd2Lj0quZwqkl1ZCqZ7Pa_Yf_D7IYXbsCR8LZoBmBByraaXnsagxL-ArDid6jEb4yAWTNueC_01HtSRmw8TDfUJdbeMpCnL-PCduPIvbrVAhLMU81H=s320"
+      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjC6RegqINtmaVlgKd1nFG8_YYGWmKm1C4TzlGOnIMz5Lz-bxvj67LvWCl5-FFmPaLdWxx_GBEXrq8LzfJ2HOaRbpXNZjNRLAQYqn3yMWiWeOQMECpCLMKgjbIbrxW6h3ym7colLOVFBd9nSZaL2eYdYIpwAmhkKetx-ZyTGlxyUPRy3Wk"
         height="180" style="margin:20px 0;">
       <p style="font-size:18px;max-width:600px;">
         Script này thuộc bản quyền
-        <a href="https://vozwiki.com" target="_blank" style="color:#fff;font-weight:bold;">VOZWIKI</a>.
+        <a href="https://tet.pro.vn" target="_blank" style="color:#fff;font-weight:bold;">TETPRO</a>.
         Vui lòng không sao chép hoặc sử dụng trái phép.
       </p>
       <p style="font-size:16px;">
@@ -382,7 +382,7 @@ document.addEventListener('DOMContentLoaded', function () {
     document.body.appendChild(overlay);
     document.body.style.overflow = 'hidden';
 
-    // Bộ đếm ngược 15 giây tự động chuyển hướng về vozwiki.com - Bytecode t[30] -> t[33]
+    // Bộ đếm ngược 15 giây tự động chuyển hướng về tet.pro.vn - Bytecode t[30] -> t[33]
     let countdown = 15;
     let intervalId;
 
@@ -393,7 +393,7 @@ document.addEventListener('DOMContentLoaded', function () {
         if (timerEl) timerEl.textContent = countdown;
         if (countdown <= 0) {
           clearInterval(intervalId);
-          window.location.href = 'https://vozwiki.com';
+          window.location.href = 'https://tet.pro.vn';
         }
       }, 1000);
     }
@@ -412,10 +412,10 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     startTimer();
-    throw new Error('❌ Script không được phép chạy ngoài hệ thống của VOZWIKI');
+    throw new Error('❌ Script không được phép chạy ngoài hệ thống của TETPRO');
   } else {
     console.log(
-      '%c✔ Script hợp lệ trên hệ thống VOZWIKI',
+      '%c✔ Script hợp lệ trên hệ thống TETPRO',
       'color: #00c853; font-weight: bold;'
     );
   }
